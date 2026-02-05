@@ -1,0 +1,57 @@
+docker --version
+
+docker info
+
+docker help
+
+docker
+
+docker ps   /  docker container ls   -- check active containers
+
+docker ps -a / docker container ls -a  -- check inactive containers 
+
+docker images  --- check images 
+
+docker pull imagename
+
+docker run imagename
+
+docker run -d imagename  --- detach mode
+
+docker run --name newname imagename -- giving user define name to container 
+
+
+docker start containerid / containername
+
+docker stop containerid/ containername
+
+docker pause  containerid / containername
+
+docker rm containerid / name   to remove container 
+
+docker rm -f containerid / namr  to forcefully remove container 
+
+docker rmi imagename   ... remove image
+
+docker rmi  $(docker images -a -q)  remove all images 
+
+docker run redis 
+
+docker run redis:8.0
+
+docker run -p 80:8081 --name myredis redis:8.0
+
+
+docker network ls 
+
+docker network create networkname  -- to create cusom bridgenetwork 
+
+docker run --name  containername  --network=customnetworkname imagename 
+
+to check 
+docker inspect containerid/name
+
+to connect host newtork
+
+docker un --name conainername --network=host imagename 
+
